@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login and register-form</title>
     <link rel="stylesheet" href="form.css">
+    <script src="js/login.js"></script>
 </head>
 
 <body>
@@ -21,10 +22,11 @@
                     <a href="#">Login</a>
                 </p>
             </form>
-            <form class="login-form">
-                <input type="text" placeholder="Username" />
-                <input type="password" placeholder="Password" />
-                <button>Login</button>
+
+            <form class="login-form" action="login.php" method="POST">
+                <input type="text" placeholder="Username" name="username" id="username" />
+                <input type="password" placeholder="Password" name="password" id="password" />
+                <button id="submit" name="submit" value="login" onclick="validate()">Login</button>
                 <p class="message">Not Registered?<a href="#">Register</a> </p>
             </form>
         </div>
