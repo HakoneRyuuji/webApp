@@ -19,7 +19,7 @@
         if (mysqli_num_rows($result) == 1) {
             //Pass
             echo" connect successful";
-            echo "<script> window.open('a.html','_self')</script>";
+            echo "<script> window.open('you.html','_self')</script>";
         } else {
             //Fail
             echo"fail";
