@@ -5,20 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Profile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="profile.css" />
-    <!--<script src="main.js"></script>-->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/profile.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".msearch").click(function(){
+                $(".nav .content li, .msearch").hide();
+                $(".minput, .cancel").show();
+                $(".minput, .cancel").css("float","left");
+            });
+            $(".cancel").click(function(){
+                $(".content li, .msearch").show();
+                $(".minput, .cancel").hide();
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="nav">
         <ul class="content">
-            <li><a class="clink" href="#">SaveAS</a></li>
-            <li><a class="clink" href="#">You</a></li>
-            <li><a class="clink" href="#">Explore</a></li>
+            <li><a class="clink" style="color: rgb(255, 255, 255)" href="#">SaveAS</a></li>
+            <li class = "exp active">You</li>
+            <li class = "exp">Explore</li>
             <li><a class="clink" href="#">Create</a></li>
+            <li style="float: right; margin-right: 16px; padding-top: 8px; cursor: pointer;"><img id="pimage" src="css/img/profile.jpg"></li>
             <input class="cinput" type="text" name="search" autocomplete="off" placeholder="Search Galery..">
+            <img class="msearch" src="css/img/search_icon.png" alt="search">
         </ul>
+        <img class="cancel" src="css/img/cancel_icon.png" alt="cancel">
+        <input class = "minput" type="text" name="msearch" autocomplete="off">
     </div>
     <div class = "banner">
+        <div style="width: 100%; height: 200px;"></div>
+        <div class="main_banner">
+            <table>
+                <tr>
+                    <td rowspan="2"><img id="mpimage" src="css/img/profile.jpg" alt="profile image"></td>
+                    <td colspan="2" class="name1">Real Name</td>
+                </tr>
+                <tr>
+                    <td class="name2">user name</td>
+                    <td class="name2">0 followers - 0 following</td>
+                </tr>
+            </table>
+        </div>
     </div>
     <div class="nav2">
         <ul class="content">
