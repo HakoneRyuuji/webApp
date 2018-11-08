@@ -4,6 +4,12 @@
 body {
     margin: 0px;
 }
+.img{
+    object-fit:cover;
+    object-position:center;
+    width:200px;
+    height:200px;
+}
 .content {
     list-style-type: none;
     margin: 0px;
@@ -95,8 +101,12 @@ body {
     display: table;
 }
 .page {
+    /* display: grid; */
+    overflow: auto;
+    height: 100%;
     width: 100%;
-    height: 495px;
+    background-color: lightblue;
+ 
 }
 .footer{
     width: 100%;
