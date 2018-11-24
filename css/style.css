@@ -2,14 +2,36 @@
 	margin:0px;
 	padding:0px;
 }
-.SearchBar {
-	position:center top;
-	top: 500px;
-	left: 500px;
+.search-box{
+	position: absolute;
+	top:2.5%;
+	left: 20%;
+	transform: translate(-2.5%,-20%);
+	background: white;
+	height: 20px;
+	width: 900px;
+	border-radius: 25px;
+	padding: 10px;
 }
-.SearchBar input {
-	height: 40px;
-	width:100px;
+.search-btn{
+	color: #e84118;
+	float: right;
+	width: 30px;
+	height:30px;
+	border-radius: 60%;
+	background: white;
+	display: flex;
+}
+.search-txt{
+	border: none;
+	background: none;
+	outline: none;
+	float: left;
+	padding: 0;
+	color:black;
+	font-size: 18px;
+	line-height: 20px;
+	width: 700px;
 }
 
 .bgimage{
@@ -48,7 +70,7 @@
 	height: 100px;
 	float: right;
 	position: right top;
-/*	background-color: red; */
+
 }
 
 .rightmenu ul{
@@ -62,7 +84,7 @@
 	font-family: 'Montserrat', sans-serif;
 	display: inline-block;
 	list-style: none;
-	font-size: 10px;
+	font-size: 20px;
 	color:white;
 	font-weight: bold;
 	line-height: 60px;
