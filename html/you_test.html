@@ -3,12 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Profile</title>
+    <title>Galery</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/profile.css" />
-    <link rel="stylesheet" href="upload.php">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/profile.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery-3.3.1.min.js"></script>
     <script>
         $(document).ready(function(){
             $(".msearch").click(function(){
@@ -39,14 +38,6 @@
             });
         });
     </script>
-    <style>
-        .img{
-            object-fit:cover;
-            object-position:center;
-            width:200px;
-            height:200px;}
-
-    </style>
 </head>
 <body>
     <div class="nav">
@@ -55,20 +46,20 @@
             <li><a class="clink active" href="#">You</a></li>
             <li><a class="clink" href="#">Explore</a></li>
             <li><a class="clink" href="#">Create</a></li>
-            <img class="menu_img" src="css/img/menu_icon.png" alt="menu">
+            <img class="menu_img" src="../css/img/menu_icon.png" alt="menu">
             <div class="pdrop">
-                <img id="pimage" src="css/img/profile.jpg" alt="profile big">
-                
+                <img id="pimage" src="../css/img/profile.jpg" alt="profile big">
+                O
                 <div class="log_out">
                     <a href="#">Setting</a>
                     <a href="#">Log Out</a>
                 </div>
             </div>
             <input class="cinput" type="text" name="search" autocomplete="off" placeholder="Search Galery..">
-            <img class="msearch" src="css/img/search_icon.png" alt="search">
-            <img class="menu_cancel" src="css/img/cancel_icon.png" alt="cancel">
+            <img class="msearch" src="../css/img/search_icon.png" alt="search">
+            <img class="menu_cancel" src="../css/img/cancel_icon.png" alt="cancel">
         </ul>
-        <img class="cancel" src="css/img/cancel_icon.png" alt="cancel">
+        <img class="cancel" src="../css/img/cancel_icon.png" alt="cancel">
         <input class = "minput" type="text" name="msearch" autocomplete="off" placeholder="Search Galery..">
     </div>
     <div class = "banner">
@@ -76,7 +67,7 @@
         <div class="main_banner">
             <table>
                 <tr>
-                    <td rowspan="2"><img id="mpimage" src="css/img/profile.jpg" alt="profile image"></td>
+                    <td rowspan="2"><img id="mpimage" src="../css/img/profile.jpg" alt="profile image"></td>
                     <td colspan="2" class="name1">Real Name</td>
                 </tr>
                 <tr>
@@ -97,58 +88,19 @@
         </ul>
     </div>
     <div class="page">
-        <form method="post" enctype="multipart/form-data">
-            <input type=file name="image">
-            <br>
-            <input type="submit" name= "submit" value="submit">
-        </form>
-        <?php
-            if(isset($_POST['submit'])){
-                if(getimagesize($_FILES['image']['tmp_name'])==FALSE){
-                    echo 'failed';
-                }
-                else {
-                    $name= addslashes($_FILES['image']['tmp_name']);
-                    $image =base64_encode(file_get_contents(addslashes($_FILES['image']['tmp_name'])));
-                    saveImage($name, $image);
-                }
-            }
-            function saveImage($name, $image){
-                $con= mysqli_connect("localhost","root","","datausers");
-                $sql="insert into imagess(name_image,image) values('$name','$image')";
-                $query= mysqli_query($con,$sql);
-                // if($query){
-                // 	echo "successed";
-                // }else {
-                // 	echo "not upload";
-                // }
-            }
-            display();
-            function display(){
-                $con= mysqli_connect("localhost","root","","datausers");
-                $sql="select*from imagess";
-                $query= mysqli_query($con,$sql);
-                $num= mysqli_num_rows($query);
-                for($i=0;$i< $num; $i++){
-                    $rerults= mysqli_fetch_array($query);
-                    $img=$rerults['image'];
-                    echo '<img class="img" src="data:image;base64,'.$img.'">';
-                }
-            }
-	?>
-        <!-- <img src="css/img/profile.jpg" alt="iamge">
-        <img src="css/img/profile.jpg" alt="iamge">
-        <img src="css/img/profile.jpg" alt="iamge">
-        <img src="css/img/profile.jpg" alt="iamge">
-        <img src="css/img/profile.jpg" alt="iamge">
-        <img src="css/img/profile.jpg" alt="iamge">
-        <img src="css/img/profile.jpg" alt="iamge">
-        <img src="css/img/profile.jpg" alt="iamge">
-        <img src="css/img/profile.jpg" alt="iamge">
-        <img src="css/img/profile.jpg" alt="iamge">
-        <img src="css/img/profile.jpg" alt="iamge">
-        <img src="css/img/profile.jpg" alt="iamge">
-        <img src="css/img/profile.jpg" alt="iamge"> -->
+        <img src="../css/img/profile.jpg" alt="iamge">
+        <img src="../css/img/profile.jpg" alt="iamge">
+        <img src="../css/img/profile.jpg" alt="iamge">
+        <img src="../css/img/profile.jpg" alt="iamge">
+        <img src="../css/img/profile.jpg" alt="iamge">
+        <img src="../css/img/profile.jpg" alt="iamge">
+        <img src="../css/img/profile.jpg" alt="iamge">
+        <img src="../css/img/profile.jpg" alt="iamge">
+        <img src="../css/img/profile.jpg" alt="iamge">
+        <img src="../css/img/profile.jpg" alt="iamge">
+        <img src="../css/img/profile.jpg" alt="iamge">
+        <img src="../css/img/profile.jpg" alt="iamge">
+        <img src="../css/img/profile.jpg" alt="iamge">
     </div>
     <div class="footer">
         <ul class="fcontent">
@@ -164,6 +116,5 @@
             <li><a class="clink" href="English">English</a></li>
         </ul>
     </div>
-    
 </body>
 </html>

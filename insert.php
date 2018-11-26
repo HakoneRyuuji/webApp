@@ -7,7 +7,7 @@ if(!empty($username) ||!empty($password)||!empty($email)){
     $host="localhost";
     $dbUsername="root";
     $dbPassword="";
-    $dbname="datauser";
+    $dbname="datausers";
 
     //create connection
     $conn = new mysqli($host,$dbUsername,$dbPassword,$dbname);
@@ -31,6 +31,7 @@ if(!empty($username) ||!empty($password)||!empty($email)){
         $stmt->bind_param("sss", $username, $password, $email);
         $stmt->execute();
         echo "New record inserted sucessfully";
+        echo "<script> window.open('you.php','_self')</script>";
         } else {
         echo "Someone already register using this email";
         }

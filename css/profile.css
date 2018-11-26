@@ -37,6 +37,13 @@ body {
     background-color: rgba(255, 255, 255);
     width: 300px;
 }
+.menu_img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin: 8px 8px 8px 16px;
+    display: none;
+}
 .msearch {
     width: 30px;
     height: 30px;
@@ -44,7 +51,7 @@ body {
     margin: 8px 16px 8px 8px;
     display: none;
 }
-.cancel {
+.cancel, .menu_cancel {
     width: 30px;
     height: 30px;
     cursor: pointer;
@@ -69,20 +76,60 @@ body {
     padding: 14px 16px;
     text-decoration: none;
 }
+.pdrop{
+    float: right;
+    line-height: 46px;
+    font-size: 1px;
+}
 #pimage {
     width: 30px;
     height: 30px;
     margin: auto;
     border-radius: 50%;
+    float: right; margin: 8px 16px 8px 0px;
+    cursor: pointer;
 }
-.exp {
+.log_out{
+    display: none;
+    position: absolute;
+    right: 0;
+    font-size: 16px;
+    background-color: rgb(230, 230, 230);
+    min-width: 140px;
+    z-index: 99;
+}
+.log_out a{
+    color: black;
+    padding: 0px 12px;
+    text-decoration: none;
+    display: block;
+}
+.log_out a:hover{
+    background-color: rgb(200, 200, 200);
+}
+.pdrop:hover .log_out{
+    display: block;
+}
+.exp, .you {
     cursor: pointer;
     color: rgba(255, 255, 255, 0.7);
+    display: block;
     text-align: center;
-    padding: 14px 16px;
+    line-height: 46px;
+    padding: 0px 16px;
 }
-.exp:hover {
+.exp:hover, .you:hover {
     color: rgba(255, 255, 255, 1);
+}
+.you div {
+    position: absolute;
+    display: none;
+    background-color: white;
+    width: 100px;
+    height: 50px;
+}
+.you:hover div{
+    display: block;
 }
 .active {
     color: rgb(255, 255, 255);
@@ -148,8 +195,13 @@ body {
     font-size: 20px;
     color: rgba(0, 0, 0, 0.6);
 }
+.nav2 .content li .active{
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
 .nav2 .content li .clink:hover{
     color: rgba(0, 0, 0, 1);
+    text-decoration: underline;
 }
 .nav2::after {
     content: "";
@@ -157,8 +209,17 @@ body {
     display: table;
 }
 .page {
-    width: 100%;
+    width: 90%;
     height: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.page img {
+    display: inline-block;
+    width: 16%;
+    height: auto;
 }
 .footer{
     width: 100%;
@@ -176,23 +237,52 @@ body {
     float: left;
 }
 @media screen and (max-width: 800px){
-    .nav2, .banner, div.footer {
+    .nav2, .banner, div.footer, .page {
         width: 800px;
     }
 }
 @media screen and (max-width: 700px){
-    .cinput {
+    .nav .content .cinput, .nav .content li {
         display: none;
+    }
+    .nav .content {
+        padding-inline-start: 0px;
     }
     .msearch {
         display: block;
         float: right;
     }
+    .menu_img {
+        display: block;
+        float: left;
+    }
+}
+@media screen and (min-width: 1000px){
+    .page {
+        height: 900px;
+    }
 }
 @media screen and (min-width: 2000px){
-    .footer {
-        position: absolute;
-        bottom: 0;
+    .page {
+        height: 1300px;
+    }
+}
+@media screen and (min-width: 3000px){
+    .page {
+        height: 1700px;
+    }
+}
+@media screen and (min-width: 3500px){
+    .page {
+        height: 2100px;
+    }
+    .fcontent {
+        width: 850px;
+    }
+}
+@media screen and (min-width: 4000px){
+    .page {
+        height: 2600px;
     }
     .fcontent {
         width: 850px;
