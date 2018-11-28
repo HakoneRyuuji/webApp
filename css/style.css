@@ -2,13 +2,106 @@
 	margin:0px;
 	padding:0px;
 }
+
+
+.load{
+	animation: slide 2s;
+}
+.slider{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 100vh;
+	animation: slide 30s infinite;
+}
+.content{
+	color: #fff;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.5);
+}
+.principal{
+	left: 50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	position: absolute;
+	letter-spacing: 5px;
+	text-align: center;
+}
+.principal button{
+
+}
+@keyframes slide{
+	0%{
+		background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2015/11/17/838246/1e8ce42727a5da4ce8df5343d29262ba-1000.jpg');
+	}
+	10.00%{
+		background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2015/11/17/838246/1e8ce42727a5da4ce8df5343d29262ba-1000.jpg');
+	}
+	10.01%{
+		background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2017/06/26/1092924/3ac9f61c6839149d0b7b49769576ef56-1000.jpg');
+	}
+	20%{
+		background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2017/06/26/1092924/3ac9f61c6839149d0b7b49769576ef56-1000.jpg');
+	}
+	20.01%{
+		background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2013/12/18/198632/9034b6e3c7aa2c0d0670ae9744d41b5b-1000.jpg');
+	}
+	30%{
+		background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2013/12/18/198632/9034b6e3c7aa2c0d0670ae9744d41b5b-1000.jpg');
+	}
+	30.01%{
+		background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2018/11/28/1303450/b2927a91aa289cf52ef85cbfef56d3a5-1000.jpg');
+	}
+	40%{
+		background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2018/11/28/1303450/b2927a91aa289cf52ef85cbfef56d3a5-1000.jpg');
+	}
+	40.01%{
+		background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2014/04/17/335910/0e9461df5652405103a0c515d563cecc-700.jpg');
+	}
+	50%{
+		background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2014/04/17/335910/0e9461df5652405103a0c515d563cecc-700.jpg');
+	}
+	50.01%{
+		background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2014/01/30/243388/7441c1e025d11c53775bb94ecc4e4fa9-1000.jpg');
+	}
+	60%{
+		background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2014/01/30/243388/7441c1e025d11c53775bb94ecc4e4fa9-1000.jpg');
+	}
+	60.01%{
+		background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2014/10/31/501982/6d6c5fc180f3c1deda238f356d14ab36-1000.jpg');
+	}
+	70%{
+		background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2014/10/31/501982/6d6c5fc180f3c1deda238f356d14ab36-1000.jpg');
+	}
+	70.01%{
+		background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2015/06/02/708323/44bbc9fff6d9e888e53f145aeec80931-1000.jpg');
+	}
+	80%{
+		background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2015/06/02/708323/44bbc9fff6d9e888e53f145aeec80931-1000.jpg');
+	}
+	80.01%{
+		background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2015/03/24/645482/79382c7a821eb90b29eea266200b8225-1000.jpg');
+	}
+	90%{
+		background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2015/03/24/645482/79382c7a821eb90b29eea266200b8225-1000.jpg');
+	}
+	90.01%{
+		background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2015/07/26/763429/26a8678adb2dc5dc11948e025be64914-1000.jpg');
+	}
+	100%{
+		background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2015/07/26/763429/26a8678adb2dc5dc11948e025be64914-1000.jpg');
+	}
+}
+
 .search-box{
 	position: absolute;
-	top:2.5%;
+	top:2%;
 	left: 20%;
-	transform: translate(-2.5%,-20%);
+	
 	background: white;
-	height: 20px;
+	height: 15px;
 	width: 900px;
 	border-radius: 25px;
 	padding: 10px;
@@ -16,8 +109,8 @@
 .search-btn{
 	color: #e84118;
 	float: right;
-	width: 30px;
-	height:30px;
+	width: 15px;
+	height:15px;
 	border-radius: 60%;
 	background: white;
 	display: flex;
@@ -32,13 +125,6 @@
 	font-size: 18px;
 	line-height: 20px;
 	width: 700px;
-}
-
-.bgimage{
-	background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2014/05/20/354878/d8397e9c6186facec7afffb2401f9caf-700.jpg');
-	background-size: 100% 110%;
-	width: 100%;
-	height: 100vh;
 }
 
 .menu{
@@ -59,7 +145,7 @@
 	padding-left: 70px;
 	font-weight: bold;
 	color: white;
-	font-size: 22px;
+	font-size: 30px;
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -89,29 +175,27 @@
 	line-height: 60px;
 	margin-left: 30px;
 	text-transform: uppercase;
+	padding-right: 20px;
 
 }
 
 #fisrtlist{
 	color: orange;
 }
-
+.rightmenu ul li:link{
+	color: white;
+}
+.rightmenu ul li:visited{
+	color: white;
+}
 .rightmenu ul li:hover{
 	color: orange;
 }
 
 
-.text{
-	width: 100%;
-	margin-top: 185px;
-	text-transform: uppercase;
-	text-align: center;
-	color:white;
-	/* position: fixed; */
-}
+
 
 .text h4{
-
 	font-size: 14px;
 	font-family: 'Open Sans', sans-serif;
 }
@@ -123,35 +207,23 @@
 	margin:14px 0px;
 }
 
-.text h3{
-	font-size: 12px;
-	font-family: 'Open Sans', sans-serif;
-}
 
 
 #buttonone{
-	background-color: white;
-	border: none;
-	font-size: 12px;
+	background-color: grey;
+	border: 1px solid white;
+	border-radius: 20px;
+	font-size: 20px;
 	font-weight: bold;
 	text-transform: uppercase;
+	text-decoration-color: yellow;
 	line-height: 40px;
 	width: 150px;
 	font-family: 'Montserrat', sans-serif;
-	margin-top: 25px;
-	border: 3px solid white;
+	
 }
 
-#buttontwo{
-	/* background-color: azure; */
-	border: none;
-	font-family: 'Montserrat', sans-serif;
-	text-transform: uppercase;
-	font-weight: bold;
-	line-height: 20px;
-	/* border: 3px solid white; */
-	width: 100px;
-}
+
  footer nav{
 	 /* float:right; */
 	 left: 0;
