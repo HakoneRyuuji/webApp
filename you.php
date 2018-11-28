@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+    
 <html>
 <head>
     <meta charset="utf-8" />
@@ -61,7 +62,7 @@
                 
                 <div class="log_out">
                     <a href="#">Setting</a>
-                    <a href="#">Log Out</a>
+                    <a href="index.html">Log Out</a>
                 </div>
             </div>
             <input class="cinput" type="text" name="search" autocomplete="off" placeholder="Search Galery..">
@@ -72,6 +73,7 @@
         <input class = "minput" type="text" name="msearch" autocomplete="off" placeholder="Search Galery..">
     </div>
     <div class = "banner">
+    
         <div style="width: 100%; height: 200px;"></div>
         <div class="main_banner">
             <table>
@@ -135,7 +137,8 @@
                     echo '<img class="img" src="data:image;base64,'.$img.'">';
                 }
             }
-	?>
+    ?>
+    
         <!-- <img src="css/img/profile.jpg" alt="iamge">
         <img src="css/img/profile.jpg" alt="iamge">
         <img src="css/img/profile.jpg" alt="iamge">
