@@ -18,7 +18,7 @@
         $result = mysqli_query($conn,$query);
         if (mysqli_num_rows($result) == 1) {
             //Pass
-            echo" connect successful";
+            // echo" connect successful";
             echo "<script> window.open('you.php','_self')</script>";
         } else {
             //Fail
