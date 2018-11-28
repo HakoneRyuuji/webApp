@@ -61,7 +61,9 @@
                 <img id="pimage" src="css/img/profile.jpg" alt="profile big">
                 
                 <div class="log_out">
+                    <a href="you.php">Profile</a>
                     <a href="#">Setting</a>
+                    <a href="image_manage.html">home</a>
                     <a href="index.html">Log Out</a>
                 </div>
             </div>
